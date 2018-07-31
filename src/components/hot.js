@@ -6,8 +6,8 @@ import {Route, Switch} from 'react-router-dom'
 import {HotChild} from "./hot-child";
 
 export class Hot extends Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props);
     }
 
     render() {
@@ -18,8 +18,6 @@ export class Hot extends Component {
                     <Route path="/hot/child" exact={true} component={HotChild}/>
                 </Switch>
             </div>
-
         )
     }
 }
-

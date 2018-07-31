@@ -1,7 +1,6 @@
 import {Tabs, WhiteSpace, Badge} from 'antd-mobile';
 import React, {Component} from 'react';
 import {Recommend} from "../recommend/recommend";
-
 const tabs = [
     {title: <Badge text={'3'}>推荐</Badge>},
     {title: <Badge text={'今日(20)'}>歌手</Badge>},
@@ -18,8 +17,9 @@ export class TabExample extends Component {
     render() {
         return (
             <div>
-                <div>
+                <div className="top">
                     <h3 className="header">Monica Music</h3>
+                    <i className="iconfont icon-yonghu"></i>
                 </div>
                 <Tabs tabs={tabs}
                       initialPage={1}
@@ -34,7 +34,6 @@ export class TabExample extends Component {
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        height: '600px',
                         backgroundColor: '#fff'
                     }}>
                         <Recommend></Recommend>

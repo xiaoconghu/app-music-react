@@ -8,7 +8,7 @@ export class Recommend extends Component {
         data: ['1', '2', '3'],
         imgHeight: 176,
         swipes: [],
-    }
+    };
 
     constructor(props) {
         super(props)
@@ -56,7 +56,11 @@ export class Recommend extends Component {
 
     getCdInfo() {
         recommendService.getRecommend().then(success => {
-            this.setState({swipes: success.data.slider})
+            let arr = success.data.slider;
+            arr.splice(arr.length - 1, 1);
+            this.setState({swipes: arr});
+
+            console.log(this.state.swipes);
         })
     }
 }

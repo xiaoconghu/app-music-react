@@ -1,0 +1,13 @@
+.header {
+    text-align: center;
+}
+
+.top {
+    position: relative;
+}
+
+.top i {
+    position: absolute;
+    top: 1px;
+    right: 15px;
+}

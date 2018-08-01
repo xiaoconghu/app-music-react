@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Carousel, WingBlank} from 'antd-mobile';
 import recommendService from '../../core/api-server/recommend';
 import {withRouter} from 'react-router-dom'
-import './recommend.less'
+import './recommend.scss'
 
 class Recommend extends Component {
 
@@ -61,7 +61,7 @@ class Recommend extends Component {
                         ))}
                     </Carousel>
                 </WingBlank>
-                <div style={{height: '300px'}}>
+                <div style={{flex:1,overflowY:'auto'}}>
                     <h5 className="list-title">热门歌单推荐</h5>
                     <div className="song-recommend">
                         <ul>

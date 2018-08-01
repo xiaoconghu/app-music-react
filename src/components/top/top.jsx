@@ -59,7 +59,6 @@ class TabExample extends Component {
                         alignItems: 'center',
                         justifyContent: 'center',
                         backgroundColor: '#fff',
-
                     }}>
                         <Recommend></Recommend>
                     </div>

@@ -1,0 +1,29 @@
+.list-view ul{
+    list-style: none;
+}
+.index-list-title{
+    height: 30px;
+    line-height: 30px;
+    padding-left: 20px;
+    font-size: 12px;
+    text-align: left;
+    color: #000000;
+    background: rgb(245, 245, 249);
+}
+.singer-l {
+    align-items: center;
+    padding: 20px 0 0 30px;
+    text-align: left;
+}
+
+.singer-name {
+    margin-left: 20px;
+    color: #000000;
+    font-size: 14px;
+}
+
+.singerImg {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}

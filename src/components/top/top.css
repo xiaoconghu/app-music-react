@@ -1,5 +1,6 @@
 .header {
     text-align: center;
+    padding: 20px 0;
 }
 
 .top {
@@ -8,6 +9,6 @@
 
 .top i {
     position: absolute;
-    top: 1px;
+    top: 20px;
     right: 15px;
 }

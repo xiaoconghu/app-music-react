@@ -21,9 +21,9 @@
       "target": "https://c.y.qq.com",
       "changeOrigin": true
     },
-    "music":{
-      "target":"http://ustbhuangyi.com",
-      "changeOrigin":true
+    "music": {
+      "target": "http://ustbhuangyi.com",
+      "changeOrigin": true
     }
   },
   "devDependencies": {

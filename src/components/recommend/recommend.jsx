@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Carousel, WingBlank} from 'antd-mobile';
 import recommendService from '../../core/api-server/recommend';
 import {withRouter} from 'react-router-dom'
+import './recommend.less'
 
 class Recommend extends Component {
 
@@ -33,12 +34,12 @@ class Recommend extends Component {
 
     render() {
         return (
-            <div style={{width:'100%'}}>
-                <WingBlank >
+            <div style={{width: '100%'}}>
+                <WingBlank>
                     <Carousel
                         autoplay={true}
                         infinite={true}
-                        swipeSpeed = {50}
+                        swipeSpeed={50}
                         beforeChange={(from, to) => console.log(`slide from ${from} to ${to}`)}
                         afterChange={index => console.log('slide to', index)}
                     >
@@ -60,7 +61,7 @@ class Recommend extends Component {
                         ))}
                     </Carousel>
                 </WingBlank>
-                <div style = {{height:'300px'}}>
+                <div style={{height: '300px'}}>
                     <h5 className="list-title">热门歌单推荐</h5>
                     <div className="song-recommend">
                         <ul>

@@ -20,7 +20,7 @@ export default {
      */
     getCdInfo() {
         return new Promise((resolve, reject) => {
-            axios.get(`http://ustbhuangyi.com/music/api/getDiscList`, {params: data}).then(result => {
+            axios.get(`/music/api/getDiscList`, {params: data}).then(result => {
                 // console.log(result);
                 result.data.code === 0 ? resolve(result.data) : reject(result.data);
             }, error => {

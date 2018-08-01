@@ -1,6 +1,8 @@
 import {Tabs, WhiteSpace, Badge} from 'antd-mobile';
 import React, {Component} from 'react';
-import {Recommend} from "../recommend/recommend";
+import Recommend from "../recommend/recommend";
+import {withRouter} from 'react-router-dom'
+
 const tabs = [
     {title: <Badge text={'3'}>推荐</Badge>},
     {title: <Badge text={'今日(20)'}>歌手</Badge>},
@@ -8,10 +10,34 @@ const tabs = [
     {title: <Badge dot>搜索</Badge>},
 ];
 
-export class TabExample extends Component {
-    constructor() {
+class TabExample extends Component {
+    state = {
+        initialPage: 1
+    };
 
-        super()
+    constructor(props) {
+
+        super(props);
+
+    }
+
+    componentDidMount() {
+        console.log(this.props.location);
+        if (this.props.location.query) {
+            this.setState({initialPage: this.props.location.query.initialPage})
+        }
+
+    }
+
+    clickTab = (tab, index) => {
+        if (index === 0) {
+            this.props.history.push("/recommend")
+        } else if (index === 1) {
+            this.props.history.push("/hot")
+        }
+    };
+    changTab = ($event) => {
+        console.log($event);
     }
 
     render() {
@@ -22,19 +48,18 @@ export class TabExample extends Component {
                     <i className="iconfont icon-yonghu"></i>
                 </div>
                 <Tabs tabs={tabs}
-                      initialPage={1}
-                      onChange={(tab, index) => {
-                          console.log('onChange', index, tab);
-                      }}
-                      onTabClick={(tab, index) => {
-                          console.log('onTabClick', index, tab);
-                      }}
+                      initialPage={3}
+                      swipeable={true}
+                      useOnPan = {false}
+                      onChange={this.changTab}
+                      onTabClick={this.clickTab}
                 >
                     <div style={{
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        backgroundColor: '#fff'
+                        backgroundColor: '#fff',
+
                     }}>
                         <Recommend></Recommend>
                     </div>
@@ -42,7 +67,6 @@ export class TabExample extends Component {
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        height: '150px',
                         backgroundColor: '#fff'
                     }}>
                         Content of second tab
@@ -51,7 +75,6 @@ export class TabExample extends Component {
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        height: '150px',
                         backgroundColor: '#fff'
                     }}>
                         Content of third tab
@@ -61,3 +84,5 @@ export class TabExample extends Component {
         );
     }
 }
+
+export default withRouter(TabExample);

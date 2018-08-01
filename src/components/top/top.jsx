@@ -2,6 +2,9 @@ import {Tabs, WhiteSpace, Badge} from 'antd-mobile';
 import React, {Component} from 'react';
 import Recommend from "../recommend/recommend";
 import {withRouter} from 'react-router-dom'
+import {Singer} from "../singer/singer";
+import {Search} from "../search/search";
+import {Seniority} from "../seniority/seniority";
 
 const tabs = [
     {title: <Badge text={'3'}>推荐</Badge>},
@@ -68,7 +71,7 @@ class TabExample extends Component {
                         justifyContent: 'center',
                         backgroundColor: '#fff'
                     }}>
-                        Content of second tab
+                        <Singer></Singer>
                     </div>
                     <div style={{
                         display: 'flex',
@@ -76,7 +79,15 @@ class TabExample extends Component {
                         justifyContent: 'center',
                         backgroundColor: '#fff'
                     }}>
-                        Content of third tab
+                        <Seniority></Seniority>
+                    </div>
+                    <div style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        backgroundColor: '#fff'
+                    }}>
+                        <Search></Search>
                     </div>
                 </Tabs>
             </div>

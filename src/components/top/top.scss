@@ -1,0 +1,18 @@
+.header {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.top {
+  position: relative;
+}
+
+.top i {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+}
+
+.am-tabs-top {
+  height: calc(100vh - 58px)
+}

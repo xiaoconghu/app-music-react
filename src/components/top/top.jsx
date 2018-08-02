@@ -5,6 +5,7 @@ import {withRouter} from 'react-router-dom'
 import {Singer} from "../singer/singer";
 import {Search} from "../search/search";
 import {Seniority} from "../seniority/seniority";
+import './top.scss';
 
 const tabs = [
     {title: <Badge text={'3'}>推荐</Badge>},
@@ -46,18 +47,19 @@ class TabExample extends Component {
     render() {
         return (
             <div>
-                <div className="top">
+                <div   className="top">
                     <h3 className="header">Monica Music</h3>
                     <i className="iconfont icon-yonghu"></i>
                 </div>
                 <Tabs tabs={tabs}
                       initialPage={3}
                       swipeable={true}
-                      useOnPan = {false}
+                      useOnPan={false}
                       onChange={this.changTab}
                       onTabClick={this.clickTab}
+
                 >
-                    <div style={{
+                    <div className="container" style={{
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',

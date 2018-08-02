@@ -27,3 +27,14 @@
     height: 50px;
     border-radius: 50%;
 }
+.list-shortcut{
+    width: 20px;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 194vw;
+    color: palegoldenrod;
+}
+.list-shortcut li{
+    margin: 0;
+}

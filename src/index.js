@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import {BrowserRouter as Router, Link, Route, Redirect} from 'react-router-dom'
+import {HashRouter as Router, Link, Route, Redirect} from 'react-router-dom'
 import registerServiceWorker from './registerServiceWorker';
 import Hot from "./components/hot";
 import {Recommend} from "./components/recommend/recommend";
 import TabExample from './components/top/top'
-import './components/top/top.css'
 import './assets/iconfont_2/iconfont.css'
+import './assets/css/global.scss'
 
 const router = (
     <Router>

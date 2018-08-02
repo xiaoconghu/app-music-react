@@ -6,6 +6,7 @@ import axios from 'axios';
 import {commonParams} from "./recommend";
 import {CommonUtil} from "../utils/common-util";
 import {isValidMusic} from "../utils/song";
+import {mkPrefix} from "./api.config";
 
 export default {
     /**
@@ -41,7 +42,7 @@ export default {
                     }
                 }
             };
-            axios.post(`http://ustbhuangyi.com/music/api/getPurlUrl`, data).then(result => {
+            axios.post(`${mkPrefix}/music/api/getPurlUrl`, data).then(result => {
                 result.data.code === 0 ? resolve(result.data) : reject(result.data);
             }, error => {
                 throw new Error(error)
@@ -49,7 +50,7 @@ export default {
         })
     },
     getSongLyric(mid) {
-        const url = 'http://ustbhuangyi.com/music/api/lyric';
+        const url = `${mkPrefix}/music/api/lyric`;
         const data = Object.assign({}, commonParams, {
             songmid: mid,
             platform: 'yqq',
@@ -63,7 +64,7 @@ export default {
         return new Promise((resolve, reject) => {
             axios.get(url, {params: data}).then((result) => {
                 result.data.code === 0 ? resolve(result.data) : reject(result.data);
-            }, error => {
+            },error=>{
                 throw new Error(error)
             })
         })

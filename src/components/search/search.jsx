@@ -13,7 +13,7 @@ export class Search extends Component {
 
     render() {
         return (
-            <div class="container">
+            <div className="container">
                 <div className="search-t">
                     <div className="search">
                         <i className="iconfont icon-sousuo icon-color" style={{color: "#866363"}}></i>

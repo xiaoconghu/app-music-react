@@ -1,10 +1,6 @@
 import React, {Component} from 'react';
-import logo from './logo.svg';
 import './App.css';
 import TabExample from "./components/top/top";
-import Hot from "./components/hot";
-import Recommend from "./components/recommend/recommend";
-import {BrowserRouter as Router, Link, Route, Redirect} from 'react-router-dom'
 
 class App extends Component {
     constructor(props) {
@@ -21,8 +17,6 @@ class App extends Component {
         return (
             <div className="App">
                 <TabExample></TabExample>
-                {/*<Route path="/hot" component={Hot}></Route>*/}
-                {/*<Route path="/recommend" component={Recommend}></Route>*/}
             </div>
         );
     }

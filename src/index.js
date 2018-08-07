@@ -2,11 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import {HashRouter as Router, Link, Route, Redirect} from 'react-router-dom'
+import {HashRouter as Router, Route} from 'react-router-dom'
 import registerServiceWorker from './registerServiceWorker';
-import Hot from "./components/hot";
 import {Recommend} from "./components/recommend/recommend";
-import TabExample from './components/top/top'
 import './assets/iconfont_2/iconfont.css'
 import './assets/css/global.scss'
 

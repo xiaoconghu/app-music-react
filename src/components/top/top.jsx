@@ -1,4 +1,4 @@
-import {Tabs, WhiteSpace, Badge} from 'antd-mobile';
+import {Badge, Tabs} from 'antd-mobile';
 import React, {Component} from 'react';
 import Recommend from "../recommend/recommend";
 import {withRouter} from 'react-router-dom'
@@ -41,7 +41,6 @@ class TabExample extends Component {
         }
     };
     changTab = ($event) => {
-        console.log($event);
     }
 
     render() {

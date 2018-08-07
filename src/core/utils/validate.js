@@ -3,6 +3,7 @@
  */
 import Vue from 'vue'
 import VeeValidate from 'vee-validate';
+
 const dict = {
     zh_CN: {
         messages: {

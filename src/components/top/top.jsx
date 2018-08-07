@@ -52,7 +52,7 @@ class TabExample extends Component {
                     <i className="iconfont icon-yonghu"></i>
                 </div>
                 <Tabs tabs={tabs}
-                      initialPage={3}
+                      initialPage={0}
                       swipeable={true}
                       useOnPan={false}
                       onChange={this.changTab}

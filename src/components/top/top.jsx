@@ -8,8 +8,8 @@ import {Seniority} from "../seniority/seniority";
 import './top.scss';
 
 const tabs = [
-    {title: <Badge text={'3'}>推荐</Badge>},
-    {title: <Badge text={'今日(20)'}>歌手</Badge>},
+    {title: <Badge text={''}>推荐</Badge>},
+    {title: <Badge text={''}>歌手</Badge>},
     {title: <Badge dot>排行</Badge>},
     {title: <Badge dot>搜索</Badge>},
 ];

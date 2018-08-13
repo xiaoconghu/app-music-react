@@ -15,7 +15,6 @@ export class NWIndexList extends Component {
     }
 
     render() {
-        console.log(this.props.data);
         return (<div style={{width: '100%'}}>
             <div className="list-view">
                 <ul>

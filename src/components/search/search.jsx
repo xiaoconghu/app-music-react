@@ -25,6 +25,7 @@ export class Search extends Component {
                     <div className="search">
                         <i className="iconfont icon-sousuo icon-color" style={{color: "#866363"}}></i>
                         <input type="text" className="search-input"
+                               value={this.state.inputValue}
                                placeholder={'搜索歌曲、歌名'}
                                onInput={this.searchChange}
                         />
@@ -38,7 +39,7 @@ export class Search extends Component {
                         <p>热门搜索</p>
                         <ul>
                             {this.state.hotKey.map((item, index) => (
-                                <li className="hot-key" key={index}>
+                                <li className="hot-key" key={index} onClick={this.searchIt.bind(this, item.k)}>
                                     {item.k}
                                 </li>
                             ))
@@ -50,7 +51,7 @@ export class Search extends Component {
                         <ul>
                             {
                                 this.state.songList.map((item, index) => (
-                                    <li key={index} onClick={this.navigateToDetail.bind(index)}>
+                                    <li key={index} onClick={this.navigateToDetail.bind(this, index)}>
                                         <i className="iconfont icon-yinle1"></i>
                                         <span>{item.songname}</span>
                                     </li>
@@ -74,9 +75,14 @@ export class Search extends Component {
     };
 
     searchChange = ($event) => {
-        this.setState({inputValue: $event.target.value})
+        this.setState({inputValue: $event.target.value});
         this.search($event.target.value);
 
+    };
+    searchIt = ($event) => {
+        console.log($event);
+        this.setState({inputValue: $event});
+        this.search($event);
     };
 
     search(value) {
@@ -92,7 +98,11 @@ export class Search extends Component {
         })
     }
 
-    navigateToDetail() {
+    deleteValue = () => {
+        this.setState({inputValue: ''})
+    };
 
+    navigateToDetail = (index) => {
+        console.log(index);
     }
 }

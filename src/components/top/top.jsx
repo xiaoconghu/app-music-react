@@ -66,7 +66,7 @@ class TabExample extends Component {
                     }}>
                         <Recommend></Recommend>
                     </div>
-                    <div style={{
+                    <div id="singerView" style={{
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',

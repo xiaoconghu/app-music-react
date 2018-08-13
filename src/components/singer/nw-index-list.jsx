@@ -19,7 +19,7 @@ export class NWIndexList extends Component {
             <div className="list-view">
                 <ul>
                     {this.props.data.map((item, index) => (
-                        <li key={index}>
+                        <li key={index} id={item.index}>
                             <h2 className="index-list-title">{item.index}</h2>
                             <ul>
                                 {item.childNode.map((_item, index) => (
@@ -36,13 +36,26 @@ export class NWIndexList extends Component {
             </div>
 
             <div className="list-shortcut">
-                <ul>
+                <ul >
                     {this.props.data.map((item, index) => (
-                        <li key={index}>{item.index}</li>
+                        <li key={index} onTouchMove={this.touchMove.bind(this)}
+                            onMouseDown={this.mouseDown.bind(this, item.index)}>{item.index}</li>
                     ))}
                 </ul>
             </div>
 
         </div>)
+    }
+
+    touchMove = (target) => {
+        console.dir(target.touches);
+    };
+    mouseDown = (target) => {
+        let offsetTop = document.getElementById(target).offsetTop;
+        this.findIt(offsetTop)
+    };
+
+    findIt(offsetTop) {
+        document.getElementById('singerView').parentNode.scrollTop = offsetTop;
     }
 }

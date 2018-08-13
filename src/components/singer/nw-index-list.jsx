@@ -11,7 +11,6 @@ export class NWIndexList extends Component {
     }
 
     componentDidMount() {
-        console.log(this.props.data);
 
     }
 

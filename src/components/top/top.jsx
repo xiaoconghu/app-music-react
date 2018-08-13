@@ -52,7 +52,7 @@ class TabExample extends Component {
                 </div>
                 <Tabs tabs={tabs}
                       initialPage={0}
-                      swipeable={true}
+                      swipeable={false }
                       useOnPan={false}
                       onChange={this.changTab}
                       onTabClick={this.clickTab}

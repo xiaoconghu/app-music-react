@@ -32,6 +32,13 @@ class Recommend extends Component {
 
     }
 
+    beforeChange = (from, to, e) => {
+
+    }
+    afterChange = (e) => {
+
+    }
+
     render() {
         return (
             <div style={{width: '100%'}}>
@@ -40,8 +47,8 @@ class Recommend extends Component {
                         autoplay={true}
                         infinite={true}
                         swipeSpeed={50}
-                        beforeChange={(from, to) => console.log(`slide from ${from} to ${to}`)}
-                        afterChange={index => console.log('slide to', index)}
+                        beforeChange={this.beforeChange}
+                        afterChange={this.afterChange}
                     >
                         {this.state.swipes.map(item => (
                             <a
@@ -61,7 +68,7 @@ class Recommend extends Component {
                         ))}
                     </Carousel>
                 </WingBlank>
-                <div style={{flex:1,overflowY:'auto'}}>
+                <div style={{flex: 1, overflowY: 'auto'}}>
                     <h5 className="list-title">热门歌单推荐</h5>
                     <div className="song-recommend">
                         <ul>

@@ -50,6 +50,5 @@ export class Singer extends Component {
             this.setState({singerData: singerData})
         });
 
-        console.log(singerData);
     }
 }

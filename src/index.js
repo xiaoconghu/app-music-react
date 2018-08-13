@@ -4,7 +4,6 @@ import './index.css';
 import App from './App';
 import {HashRouter as Router, Route} from 'react-router-dom'
 import registerServiceWorker from './registerServiceWorker';
-import {Recommend} from "./components/recommend/recommend";
 import './assets/iconfont_2/iconfont.css'
 import './assets/css/global.scss'
 

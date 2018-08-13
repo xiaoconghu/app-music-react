@@ -61,6 +61,10 @@
       "target": "https://c.y.qq.com",
       "changeOrigin": true
     },
+    "/splcloud": {
+      "target": "https://c.y.qq.com",
+      "changeOrigin": true
+    },
     "music": {
       "target": "http://ustbhuangyi.com",
       "changeOrigin": true
